@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class StateMachine<T, W> : Singleton<StateMachine<T,W>> where T : IState<W> where W : Enum
+public class StateMachine<T, W> : MonoSingleton<StateMachine<T,W>> where T : IState<W> where W : Enum
 {
     protected T currentState;
     protected T nextState;

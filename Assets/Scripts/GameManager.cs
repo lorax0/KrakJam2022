@@ -5,16 +5,22 @@ using UnityEngine.InputSystem;
 
 namespace KrakJam2022
 {
-    public class GameManager : Singleton<GameManager>
+    public class GameManager : MonoSingleton<GameManager>
     {
         [SerializeField] protected InputActionAsset actionAsset;
         [SerializeField] protected List<InputActionReference> actionsToBlockOnInteraction;
 
         private List<IGameState> states = new List<IGameState>();
 
+        protected override void Awake()
+        {
+            isPersistent = true;
+            base.Awake();
+        }
+
         private void Start()
         {
-            //this.PrepareGameStateMachine();
+            this.PrepareGameStateMachine();
         }
 
         private void OnEnable()
