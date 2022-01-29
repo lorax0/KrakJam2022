@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class GameStateMachine : StateMachine<IGameState, GameStateType>
 {
+    protected override void Awake()
+    {
+        isPersistent = true;
+        base.Awake();
+    }
 }
