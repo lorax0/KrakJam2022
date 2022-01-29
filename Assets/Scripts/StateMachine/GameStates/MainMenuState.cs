@@ -10,7 +10,8 @@ public class MainMenuState : IGameState
     public void Enter()
     {
         Debug.LogError($"Enter {Type} state");
-        SceneManager.LoadScene(Globals.scene_MainMenu);
+        //SceneManager.LoadScene(Globals.scene_MainMenu);
+        SceneManager.LoadScene("TEST");
     }
 
     public void Exit()
