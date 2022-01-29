@@ -8,6 +8,8 @@ public class InteractiveGroupItems : MonoBehaviour, IInteractable
     [SerializeField]
     private CameraZoom cameraZoom;
     [SerializeField]
+    private Collider coll;
+    [SerializeField]
     private List<InteractiveItem> items;
 
     private void Awake()
@@ -29,9 +31,11 @@ public class InteractiveGroupItems : MonoBehaviour, IInteractable
 
     private void SetActivity(bool isActive)
     {
+        coll.enabled = !isActive;
         foreach (var item in items)
         {
-            item.gameObject.SetActive(isActive);
+            item.CanInteract = isActive;
+            item.Collider.enabled = isActive;
         }
     }
 }
