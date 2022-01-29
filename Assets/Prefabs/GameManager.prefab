@@ -46,3 +46,4 @@ MonoBehaviour:
   actionAsset: {fileID: -944628639613478452, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}
   actionsToBlockOnInteraction:
   - {fileID: -7471695015195503875, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}
+  clickAction: {fileID: -4472084449425319212, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}

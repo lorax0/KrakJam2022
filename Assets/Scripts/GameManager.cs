@@ -7,10 +7,14 @@ namespace KrakJam2022
 {
     public class GameManager : MonoSingleton<GameManager>
     {
+        public InputActionReference ClickAction => this.clickAction;
+
         [SerializeField] protected InputActionAsset actionAsset;
         [SerializeField] protected List<InputActionReference> actionsToBlockOnInteraction;
+        [SerializeField] protected InputActionReference clickAction;
 
         private List<IGameState> states = new List<IGameState>();
+
 
         protected override void Awake()
         {
