@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,7 +15,9 @@ namespace KrakJam2022
         [SerializeField] protected InputActionReference clickAction;
 
         private List<IGameState> states = new List<IGameState>();
+        private bool hasMission = false;
 
+        public bool HasMission { get => hasMission; set => hasMission = value; }
 
         protected override void Awake()
         {
@@ -57,6 +60,7 @@ namespace KrakJam2022
         {
             this.states.Add(new GameState());
             this.states.Add(new MainMenuState());
+            this.states.Add(new LevelManagerState());
             GameStateMachine.Instance.Initialize(this.states, GameStateType.MainMenu);
         }
     }
