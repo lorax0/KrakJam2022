@@ -17,7 +17,7 @@ public class MainMenuState : IGameState
         await UniTask.WaitUntil(() => SceneManager.GetActiveScene().name == sceneToLoad);
 
         fogController = MonoBehaviour.FindObjectOfType<FogController>();
-        if(fogController != null)
+        if (fogController != null)
         {
             fogController.SetEmision(125);
         }
