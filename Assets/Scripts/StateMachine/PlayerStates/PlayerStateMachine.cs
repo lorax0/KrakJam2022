@@ -6,6 +6,7 @@ public class PlayerStateMachine : StateMachine<IPlayerState, PlayerStateType>
 {
     protected override void Awake()
     {
+        isPersistent = true;
         PrepareStates();
         base.Awake();
         Initialize(PlayerStateType.Physical);

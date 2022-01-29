@@ -7,6 +7,14 @@ namespace KrakJam2022
 {
     public static class InputActionManager
     {
+        public static void WasPressedButtonThisFrame(InputAction inputAction, Action callback)
+        {
+            if (WasPressedButtonThisFrame(inputAction))
+            {
+                callback();
+            }
+        }
+
         public static bool WasPressedButtonThisFrame(InputAction inputAction)
         {
             if (inputAction != null)

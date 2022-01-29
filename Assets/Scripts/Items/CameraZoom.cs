@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace KrakJam2022
 {
-    public class CameraZoom : MonoBehaviour, IInteractable
+    public class CameraZoom : MonoBehaviour
     {
         [SerializeField] protected new Camera camera;
 
@@ -16,11 +16,11 @@ namespace KrakJam2022
             this.gameManager = GameManager.Instance;
         }
 
-        public void Interact()
+        public void ZoomIn()
         {
             if (this.defaultCamera != null)
             {
-                this.Uninteract();
+                this.ZoomOut();
                 return;
             }
             this.gameManager.BlockMove();
@@ -30,7 +30,7 @@ namespace KrakJam2022
 
         }
 
-        private void Uninteract()
+        public void ZoomOut()
         {
             this.camera.gameObject.SetActive(false);
             this.defaultCamera.gameObject.SetActive(true);

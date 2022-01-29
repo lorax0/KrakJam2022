@@ -1,39 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace KrakJam2022
+namespace KrakJam2022.Player
 {
     public class PlayerRay : MonoBehaviour
     {
         [SerializeField] protected float rayDistance = 5.0f;
         [SerializeField] protected InputActionReference useAction;
 
-        void Update()
+        private bool isBusy = false;
+        private IInteractable interactableItem;
+
+        private void Update()
         {
-            Vector3 frontDir = this.transform.TransformDirection(Vector3.forward);
-            Debug.DrawRay(this.transform.position, frontDir * this.rayDistance, Color.green);
+            if (!isBusy)
+                CastRay();
+            else
+                InputActionManager.WasPressedButtonThisFrame(this.useAction, ExitObject);
+        }
+
+        private Vector3 GetPlayerDirection()
+        {
+            return transform.TransformDirection(Vector3.forward);
+        }
+
+        private void CastRay()
+        {
             RaycastHit hit;
-            if (Physics.Raycast(this.transform.position, frontDir, out hit, this.rayDistance))
+            if (Physics.Raycast(this.transform.position, GetPlayerDirection(), out hit, this.rayDistance))
             {
-                this.UseObject(hit.transform.gameObject, hit.distance);
-                return;
+                InputActionManager.WasPressedButtonThisFrame(this.useAction, () => UseObject(hit.transform.gameObject));
             }
         }
 
-        private void UseObject(GameObject gameObject, float distance)
+        private void UseObject(GameObject gameObject)
         {
-            var interactableItem = gameObject.GetComponent<IInteractable>();
-            if (interactableItem == null)   return;
-            
-            if (InputActionManager.WasPressedButtonThisFrame(this.useAction))
-            {
-                interactableItem.Interact();
-            }
+            interactableItem = gameObject.GetComponent<IInteractable>();
+            if (interactableItem == null)
+                return;
+
+            isBusy = true;
+            interactableItem.EnterInteraction();
+        }
+
+        private void ExitObject()
+        {
+            isBusy = false;
+            interactableItem.ExitInteraction();
+            interactableItem = null;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Debug.DrawRay(this.transform.position, GetPlayerDirection() * this.rayDistance, Color.green);
         }
     }
 }

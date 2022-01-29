@@ -5,6 +5,7 @@ namespace KrakJam2022
 {
     public interface IInteractable
     {
-        void Interact();
+        void EnterInteraction();
+        void ExitInteraction();
     }
 }
