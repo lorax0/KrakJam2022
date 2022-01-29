@@ -15,7 +15,9 @@ namespace KrakJam2022
         [SerializeField] protected InputActionReference clickAction;
 
         private List<IGameState> states = new List<IGameState>();
+        private bool hasMission = false;
 
+        public bool HasMission { get => hasMission; set => hasMission = value; }
 
         protected override void Awake()
         {

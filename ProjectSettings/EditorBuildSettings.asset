@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/GameOld.unity
     guid: e283b3e6ea7d6364e8fbcabc9cbe7d1e
   - enabled: 1
     path: Assets/Scenes/TEST.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KarolGame.unity
     guid: 2b893fedfab28a4439fa857044d95250
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 08cb7c554e798d94c9576a1c1390afaa
   m_configObjects: {}

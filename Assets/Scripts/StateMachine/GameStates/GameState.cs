@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameState : IGameState
 {
@@ -9,6 +10,7 @@ public class GameState : IGameState
     public void Enter()
     {
         Debug.LogError($"Enter {Type} state");
+        SceneManager.LoadScene(Globals.scene_Game);
     }
 
     public void Exit()

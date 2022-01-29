@@ -30,11 +30,9 @@ public class Ghost : MonoBehaviour
     {
         if (!isActive)
             return;
-
-        Debug.Log("is active");
+        
         if (InputActionManager.WasPressedButtonThisFrame(nextDialogoue))
         {
-            Debug.Log("space click");
             ShowNextDialogue();
         }
     }
@@ -69,6 +67,7 @@ public class Ghost : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.HasMission = true;
             textHandler.gameObject.SetActive(false);
             toldWholeStory = true;
             player.enabled = true;
