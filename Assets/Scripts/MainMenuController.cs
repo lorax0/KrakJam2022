@@ -1,4 +1,5 @@
-﻿using KrakJam2022.Player;
+﻿using Cinemachine;
+using KrakJam2022.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,10 @@ public class MainMenuController : MonoBehaviour
 
     [SerializeField]
     private Player player;
+    [SerializeField]
+    private Ghost ghost;
+    [SerializeField]
+    private CinemachineVirtualCamera levelManagerCamera;
 
     private void OnEnable()
     {
@@ -40,6 +45,8 @@ public class MainMenuController : MonoBehaviour
         GameStateMachine.Instance.Switch(GameStateType.LevelManager);
         gameObject.SetActive(false);
         player.gameObject.SetActive(true);
+        ghost.gameObject.SetActive(true);
+        levelManagerCamera.gameObject.SetActive(true);
     }
 
     public void OnOptionsButton()
