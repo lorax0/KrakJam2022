@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -57,6 +58,7 @@ namespace KrakJam2022
         {
             this.states.Add(new GameState());
             this.states.Add(new MainMenuState());
+            this.states.Add(new LevelManagerState());
             GameStateMachine.Instance.Initialize(this.states, GameStateType.MainMenu);
         }
     }

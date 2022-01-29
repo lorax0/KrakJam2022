@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameState : IGameState
 {
+    private FogController fogController;
+
     public GameStateType Type => GameStateType.Game;
 
     public void Enter()

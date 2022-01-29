@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: e283b3e6ea7d6364e8fbcabc9cbe7d1e
+  - enabled: 1
+    path: Assets/Scenes/TEST.unity
+    guid: e0865d367cc216449a54a1b6621a53f8
+  - enabled: 1
+    path: Assets/Scenes/KarolMainMenu.unity
+    guid: cd9bf94c7fec8c74ba78daba31d19d88
+  - enabled: 1
+    path: Assets/Scenes/KarolGame.unity
+    guid: 2b893fedfab28a4439fa857044d95250
   m_configObjects: {}
