@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
@@ -16,14 +17,22 @@ public class EndGame : MonoBehaviour
     private TextMeshProUGUI textHandler;
     [SerializeField]
     private CinemachineVirtualCamera camera;
+    [SerializeField]
+    private GameObject ui;
+    [SerializeField]
+    private Button exit;
 
     public void End()
     {
         Debug.Log("END");
-        player.transform.position = endPosition.position;
+        //player.transform.position = endPosition.position;
+        var playerRay = FindObjectOfType<PlayerRay>();
+        playerRay.Reset();
         textHandler.gameObject.SetActive(true);
         camera.gameObject.SetActive(true);
         GameManager.Instance.BlockMove();
         player.enabled = true;
+        ui.SetActive(true);
+        exit.onClick.AddListener(delegate { Application.Quit(); });
     }
 }

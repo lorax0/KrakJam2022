@@ -19,6 +19,12 @@ namespace KrakJam2022.Player
                 InputActionManager.WasPressedButtonThisFrame(this.useAction, ExitObject);
         }
 
+        public void Reset()
+        {
+            if (interactableItem != null)
+                interactableItem.ExitInteraction();
+        }
+
         private Vector3 GetPlayerDirection()
         {
             return transform.TransformDirection(Vector3.forward);
