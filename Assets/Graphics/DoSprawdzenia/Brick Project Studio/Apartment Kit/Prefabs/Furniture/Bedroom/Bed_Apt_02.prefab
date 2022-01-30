@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 8682285235734031359}
+  coll:
+  - {fileID: 2302305627258387645}
   anim: {fileID: 2302305627513817229}
 --- !u!1 &2302305627258387641
 GameObject:

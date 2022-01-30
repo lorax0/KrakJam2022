@@ -623,7 +623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 5545287591542597059}
+  coll:
+  - {fileID: 5545287591542597059}
   anim: {fileID: 5545287591542597058}
 --- !u!1 &5545287591628662491
 GameObject:
@@ -704,7 +705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 5545287591628662487}
+  coll:
+  - {fileID: 5545287591542597059}
   anim: {fileID: 5545287591628662486}
 --- !u!1 &5601342599470214940
 GameObject:
@@ -853,7 +855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 3075772650325086569}
+  coll:
+  - {fileID: 3075772650325086569}
   anim: {fileID: 5545287591788728563}
 --- !u!1 &5961576764500733094
 GameObject:
@@ -1002,7 +1005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 1791910593797874242}
+  coll:
+  - {fileID: 1791910593797874242}
   anim: {fileID: 5545287590895851206}
 --- !u!1 &6345318140756405163
 GameObject:
