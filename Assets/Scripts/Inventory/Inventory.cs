@@ -1,4 +1,5 @@
-﻿using KrakJam2022;
+﻿using Cinemachine;
+using KrakJam2022;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,10 @@ public class Inventory : MonoSingleton<Inventory>
     private InputActionReference input;
     [SerializeField] protected Camera camera;
     [SerializeField] protected Camera oldCamera;
+
+    private bool finishedPuzzle = false;
+
+    public bool FinishedPuzzle { get => finishedPuzzle; set => finishedPuzzle = value; }
 
     protected override void Awake()
     {
@@ -47,12 +52,23 @@ public class Inventory : MonoSingleton<Inventory>
             this.oldCamera.gameObject.SetActive(false);
             this.camera.gameObject.SetActive(true);
         }
-        if (HasAnyNeededItem())
+        CheckWinCondition();
+    }
+
+    public void CheckWinCondition()
+    {
+        if (HasAnyNeededItem() && finishedPuzzle)
         {
             Debug.LogError($"END GAME");
             var endGame = FindObjectOfType<EndGame>();
             endGame.End();
         }
+    }
+
+    public void RevertCameraSettings()
+    {
+        this.oldCamera.gameObject.SetActive(true);
+        this.camera.gameObject.SetActive(false);
     }
 
     public bool HasWholeMap()

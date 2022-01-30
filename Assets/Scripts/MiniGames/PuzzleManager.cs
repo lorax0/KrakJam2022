@@ -27,6 +27,9 @@ namespace KrakJam2022
                 if (puzzleElement.Finish == false) return;
             }
             this.OnFinishPuzzle?.Invoke();
+            Inventory.Instance.FinishedPuzzle = true;
+            Inventory.Instance.RevertCameraSettings();
+            Inventory.Instance.CheckWinCondition();
         }
     }
 }
