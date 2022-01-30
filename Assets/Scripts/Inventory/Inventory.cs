@@ -20,6 +20,16 @@ public class Inventory : MonoSingleton<Inventory>
         base.Awake();
     }
 
+    private void Start()
+    {
+        if (HasAnyNeededItem())
+        {
+            Debug.LogError($"END GAME");
+            var endGame = FindObjectOfType<EndGame>();
+            endGame.End();
+        }
+    }
+
     public void AddItem(InteractiveItem item)
     {
         if (items.Contains(item))
@@ -33,6 +43,12 @@ public class Inventory : MonoSingleton<Inventory>
         {
             Debug.LogError("Run puzzle mini game!");
         }
+        if (HasAnyNeededItem())
+        {
+            Debug.LogError($"END GAME");
+            var endGame = FindObjectOfType<EndGame>();
+            endGame.End();
+        }
     }
 
     private bool HasWholeMap()
@@ -40,5 +56,12 @@ public class Inventory : MonoSingleton<Inventory>
         int mapPartCount = items.Where(t => t.Type.Equals(ItemType.MapPart)).Count();
         bool hasWholeMap = mapPartCount == Globals.mapParts;
         return hasWholeMap;
+    }
+
+    private bool HasAnyNeededItem()
+    {
+        if (Globals.neededItemsCount == items.Count)
+            return true;
+        return false;
     }
 }

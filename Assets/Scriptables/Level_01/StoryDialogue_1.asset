@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b66d290eeb424a4cb7d719a62706df3, type: 3}
   m_Name: StoryDialogue_1
   m_EditorClassIdentifier: 
-  text: 'Historyjka bla bla '
+  text: "Przed \u015Bmierci\u0105 zakopa\u0142em maj\u0105tek rodzinny w pewnym miejscu
+    i pragn\u0119 aby trafi\u0142 w r\u0119ce moich potomk\xF3w."

@@ -42,8 +42,9 @@ namespace KrakJam2022.Player
             return moveDirection;
         }
 
-        private void SetAnimation(bool isWalking)
+        public void SetAnimation(bool isWalking)
         {
+            if (!animator) return;
             if(isWalking && this.animator.runtimeAnimatorController != this.walkAnimation)
                 this.animator.runtimeAnimatorController = this.walkAnimation;
             else if (!isWalking && this.animator.runtimeAnimatorController != this.idleAnimation)

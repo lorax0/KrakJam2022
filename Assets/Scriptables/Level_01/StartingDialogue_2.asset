@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b66d290eeb424a4cb7d719a62706df3, type: 3}
   m_Name: StartingDialogue_2
   m_EditorClassIdentifier: 
-  text: "M\xF3g\u0142by\u015B mi pom\xF3c? Jak widzisz utkn\u0105\u0142em w tym \u015Bwiecie
-    bo nie rozwi\u0105za\u0142em jeszcze jednej sprawy..."
+  text: Zaraz zaraz...
