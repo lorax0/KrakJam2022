@@ -5,7 +5,7 @@ namespace KrakJam2022.Player
 {
     public class PlayerRay : MonoBehaviour
     {
-        [SerializeField] protected float rayDistance = 5.0f;
+        [SerializeField] protected float rayDistance = 2.5f;
         [SerializeField] protected InputActionReference useAction;
 
         private bool isBusy = false;
