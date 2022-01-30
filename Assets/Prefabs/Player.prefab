@@ -131,6 +131,9 @@ MonoBehaviour:
   movementAction: {fileID: -7471695015195503875, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}
   movementSpeed: 5
   rotationSpeed: 500
+  animator: {fileID: 0}
+  walkAnimation: {fileID: 22100000, guid: 37c3a1200439ffb46a4bc65249fbb0b8, type: 2}
+  idleAnimation: {fileID: 22100000, guid: 488b144d614a01f47b5e5cbae9b40a58, type: 2}
 --- !u!114 &4666277296910291331
 MonoBehaviour:
   m_ObjectHideFlags: 0
