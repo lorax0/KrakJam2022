@@ -439,7 +439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 1871822642}
+  coll:
+  - {fileID: 1871822642}
   anim: {fileID: 5386436854384878192}
 --- !u!1 &5386436854384878198
 GameObject:
@@ -868,7 +869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 1871822644}
+  coll:
+  - {fileID: 1871822644}
   anim: {fileID: 5483040691484923750}
 --- !u!1 &7851711041489694631
 GameObject:
