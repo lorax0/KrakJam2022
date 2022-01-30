@@ -18,6 +18,7 @@ public class Inventory : MonoSingleton<Inventory>
     [SerializeField] protected Camera oldCamera;
 
     private bool finishedPuzzle = false;
+    private bool findMap = false;
 
     public bool FinishedPuzzle { get => finishedPuzzle; set => finishedPuzzle = value; }
 
@@ -51,6 +52,7 @@ public class Inventory : MonoSingleton<Inventory>
             Debug.LogError("Run puzzle mini game!");
             this.oldCamera.gameObject.SetActive(false);
             this.camera.gameObject.SetActive(true);
+            this.findMap = true;
         }
         CheckWinCondition();
     }
@@ -75,7 +77,7 @@ public class Inventory : MonoSingleton<Inventory>
     {
         int mapPartCount = items.Where(t => t.Type.Equals(ItemType.MapPart)).Count();
         bool hasWholeMap = mapPartCount == Globals.mapParts;
-        return hasWholeMap;
+        return hasWholeMap && findMap == false;
     }
 
     private bool HasAnyNeededItem()
