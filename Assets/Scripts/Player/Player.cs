@@ -13,6 +13,17 @@ namespace KrakJam2022.Player
         [SerializeField] protected Animator animator;
         [SerializeField] protected AnimatorOverrideController walkAnimation;
         [SerializeField] protected AnimatorOverrideController idleAnimation;
+        [SerializeField] protected PlayerDisabler disabler;
+
+        private void Awake()
+        {
+            GameManager.Instance.OnChangeMoveStatus += disabler.SetActivity;
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.OnChangeMoveStatus -= disabler.SetActivity;
+        }
 
         private void FixedUpdate()
         {

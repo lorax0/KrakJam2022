@@ -35,7 +35,10 @@ public class InteractiveGroupItems : MonoBehaviour, IInteractable
         foreach (var item in items)
         {
             item.CanInteract = isActive;
-            item.Collider.enabled = isActive;
+            foreach (var collider in item.Collider)
+            {
+                collider.enabled = isActive;
+            }
         }
     }
 }

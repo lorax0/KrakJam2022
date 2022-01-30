@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 1788520348205508489}
-  type: 1
+  coll:
+  - {fileID: 1788520348205508489}
