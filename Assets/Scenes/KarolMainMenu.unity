@@ -368,7 +368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 0}
+  coll:
+  - {fileID: 0}
 --- !u!4 &8737222
 Transform:
   m_ObjectHideFlags: 0
@@ -1375,7 +1376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  coll: {fileID: 0}
+  coll:
+  - {fileID: 0}
 --- !u!4 &211843907
 Transform:
   m_ObjectHideFlags: 0
@@ -24799,6 +24801,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5254844767634069263, guid: 2f5f25b042bf14e2e81d69a769884149, type: 3}
   m_PrefabInstance: {fileID: 2139235964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2139235967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4770605597030417178, guid: 2f5f25b042bf14e2e81d69a769884149, type: 3}
+  m_PrefabInstance: {fileID: 2139235964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4666277297342648494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24814,6 +24821,10 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4666277296910291328, guid: 49d4e8cc0a9e90b45a66adc875af6e21, type: 3}
+      propertyPath: disabler.objectToDisable
+      value: 
+      objectReference: {fileID: 2139235967}
     - target: {fileID: 4666277296910291329, guid: 49d4e8cc0a9e90b45a66adc875af6e21, type: 3}
       propertyPath: m_Constraints
       value: 112

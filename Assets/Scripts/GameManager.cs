@@ -17,6 +17,7 @@ namespace KrakJam2022
         private List<IGameState> states = new List<IGameState>();
         private bool hasMission = false;
 
+        public Action<bool> OnChangeMoveStatus;
         public bool HasMission { get => hasMission; set => hasMission = value; }
 
         protected override void Awake()
@@ -46,6 +47,7 @@ namespace KrakJam2022
             {
                 action.action.Disable();
             }
+            OnChangeMoveStatus?.Invoke(false);
         }
 
         public void UnblockMove()
@@ -54,6 +56,7 @@ namespace KrakJam2022
             {
                 action.action.Enable();
             }
+            OnChangeMoveStatus?.Invoke(true);
         }
         
         private void PrepareGameStateMachine()
