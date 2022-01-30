@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b66d290eeb424a4cb7d719a62706df3, type: 3}
-  m_Name: StartingDialogue_1
+  m_Name: StoryDialogue_6
   m_EditorClassIdentifier: 
-  text: "Hej Ty na co si\u0119 gapisz?"
+  text: "Trafisz tam pod\u0105\u017Caj\u0105c do ko\u0144ca t\u0105 \u015Bcie\u017Ck\u0105."

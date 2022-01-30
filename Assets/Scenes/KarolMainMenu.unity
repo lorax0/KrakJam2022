@@ -16156,7 +16156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64716680146339866, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5669076221192529260, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_Size.x
@@ -16168,7 +16168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669076221192529260, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_Size.z
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5669076221192529260, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_Enabled
@@ -16200,7 +16200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902260327286195470, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.94
+      value: 4.4929104
       objectReference: {fileID: 0}
     - target: {fileID: 8902260327286195470, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16208,7 +16208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902260327286195470, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.21
+      value: 15.005557
       objectReference: {fileID: 0}
     - target: {fileID: 8902260327286195470, guid: c5f54578f02e71045ba38f8a282c5b58, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16285,11 +16285,19 @@ MonoBehaviour:
   nextDialogoue: {fileID: 7263927388178885056, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 0016ccc416f88e543b0201594abecd30, type: 2}
+  - {fileID: 11400000, guid: a8101aad14cc22f458a666883d8419cb, type: 2}
+  - {fileID: 11400000, guid: 59a50b5f070f63c42af4ba13c337dd6e, type: 2}
   - {fileID: 11400000, guid: 72eab159ba8380d488b1a724d35170b7, type: 2}
+  - {fileID: 11400000, guid: 37300da094780ce4aa19ac6cf07607be, type: 2}
   - {fileID: 11400000, guid: db7c134b8d346144aa3dd63b7fca7039, type: 2}
+  - {fileID: 11400000, guid: e3d6e33b54e9b154e9b12d58137626de, type: 2}
   - {fileID: 11400000, guid: 07ebb5b1c5f426f4b934b217cf99ca3c, type: 2}
+  - {fileID: 11400000, guid: cb41a238a0d627a47996022cafc4a248, type: 2}
+  - {fileID: 11400000, guid: af050feec74d7994a8d54cf4608d23fc, type: 2}
+  - {fileID: 11400000, guid: 9f76a37ece7df804a8eed7e60c032c6b, type: 2}
+  - {fileID: 11400000, guid: 3b7c33198e074ac49b56b672b06ade24, type: 2}
   repeatDialogue: {fileID: 11400000, guid: 16cee566a97fb0a4fa02e36aebf27794, type: 2}
-  repeatFromIndex: 2
+  repeatFromIndex: 5
   player: {fileID: 4666277297342648495}
 --- !u!1 &1380133168
 GameObject:

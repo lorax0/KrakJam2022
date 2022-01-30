@@ -43,6 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d67513107e973a439d4b87b3eda6bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neededItems: []
+  neededItems:
+  - {fileID: 6130625165368984865, guid: 9180590293c1bf14ca34a0497e0ffcce, type: 3}
+  - {fileID: 4776285945913114278, guid: 15355c4fbf78d4b4390faccf6b504cc5, type: 3}
+  - {fileID: 9130147923105166452, guid: 05c72b3d45ef7174f98db57cdf376a9a, type: 3}
+  - {fileID: 5380961064625638493, guid: e2c473b4904b08a40a1f30fb6980a8a8, type: 3}
+  - {fileID: 3742230999423088507, guid: d7b220dc87b48284fb166cd5ae436b06, type: 3}
+  - {fileID: 6252243407996678955, guid: beb87db6153f69442821a348e08035ab, type: 3}
   items: []
   input: {fileID: 7263927388178885056, guid: 8f3c44281f28f924086564c59f9872aa, type: 3}

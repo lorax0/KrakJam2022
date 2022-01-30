@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b66d290eeb424a4cb7d719a62706df3, type: 3}
-  m_Name: StartingDialogue_1
+  m_Name: StoryDialogue_3
   m_EditorClassIdentifier: 
-  text: "Hej Ty na co si\u0119 gapisz?"
+  text: "Dzi\u0119kuj\u0119!\nZatem musisz odszuka\u0107 m\xF3j dom, a w nim zebra\u0107
+    wszystkie fragmenty mapy oraz klucz..."

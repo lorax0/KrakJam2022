@@ -43,6 +43,7 @@ public class Ghost : MonoBehaviour
             return;
 
         player.enabled = false;
+        player.SetAnimation(false);
         textHandler.gameObject.SetActive(true);
         isActive = true;
         if (!toldWholeStory)
