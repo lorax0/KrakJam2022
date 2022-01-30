@@ -7,6 +7,8 @@ namespace KrakJam2022
 {
     public class InteractCamera : MonoBehaviour
     {
+        public Action OnLastMapTake;
+
         protected GameManager gameManager;
         protected Camera camera;
 
@@ -32,6 +34,7 @@ namespace KrakJam2022
             {
                 InteractiveItem item = hit.transform.gameObject.GetComponent<InteractiveItem>();
                 item?.Interact();
+                if (Inventory.Instance.HasWholeMap()) this.OnLastMapTake?.Invoke();
             }
         }
     }

@@ -13,6 +13,8 @@ public class Inventory : MonoSingleton<Inventory>
     private List<InteractiveItem> items;
     [SerializeField]
     private InputActionReference input;
+    [SerializeField] protected Camera camera;
+    [SerializeField] protected Camera oldCamera;
 
     protected override void Awake()
     {
@@ -42,6 +44,8 @@ public class Inventory : MonoSingleton<Inventory>
         if (HasWholeMap())
         {
             Debug.LogError("Run puzzle mini game!");
+            this.oldCamera.gameObject.SetActive(false);
+            this.camera.gameObject.SetActive(true);
         }
         if (HasAnyNeededItem())
         {
@@ -51,7 +55,7 @@ public class Inventory : MonoSingleton<Inventory>
         }
     }
 
-    private bool HasWholeMap()
+    public bool HasWholeMap()
     {
         int mapPartCount = items.Where(t => t.Type.Equals(ItemType.MapPart)).Count();
         bool hasWholeMap = mapPartCount == Globals.mapParts;

@@ -12,6 +12,7 @@ namespace KrakJam2022
 
         private void Start()
         {
+            this.interactCamera.OnLastMapTake += this.ZoomOut;
             this.gameManager = GameManager.Instance;
         }
 
